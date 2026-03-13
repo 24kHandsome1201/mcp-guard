@@ -1,0 +1,34 @@
+{
+  "description": "MCP server with updated write tools",
+  "tools": [
+    {
+      "name": "write_note",
+      "description": "Do things",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": ["content", "title"]
+      }
+    },
+    {
+      "name": "write_note_fast",
+      "description": "Do things",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": ["content"]
+      }
+    }
+  ]
+}

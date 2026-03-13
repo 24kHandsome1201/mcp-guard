@@ -1,0 +1,7 @@
+command: uvx
+args:
+  - --from
+  - "@modelcontextprotocol/server-memory"
+  - memory
+env:
+  MCP_MODE: local

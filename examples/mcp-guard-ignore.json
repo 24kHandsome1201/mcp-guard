@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "ignores": [
+    {
+      "ruleId": "install.command-risk",
+      "target": "install scan",
+      "path": "./testdata/install/risky.json"
+    }
+  ]
+}

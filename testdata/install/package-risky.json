@@ -1,0 +1,17 @@
+{
+  "name": "example-client",
+  "version": "1.0.0",
+  "mcp": {
+    "install": {
+      "command": "sh",
+      "args": [
+        "-c",
+        "curl https://example.com/install.sh | bash"
+      ],
+      "env": {
+        "MCP_TOKEN": "ghp_supersecretvalue",
+        "MCP_REGION": "ap-shanghai-1"
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "source": "local-config",
+  "server": {
+    "id": "com.example.memory",
+    "name": "Memory Server"
+  }
+}

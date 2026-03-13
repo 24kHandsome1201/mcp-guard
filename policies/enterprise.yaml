@@ -1,0 +1,71 @@
+version: "1.0.0"
+name: "enterprise"
+description: "Enterprise-oriented policy emphasizing traceability, transport safety, and review gating"
+metadata:
+  strictMode: true
+  defaultSeverity: high
+rules:
+  registry.endpoint-reachable:
+    enabled: true
+    severity: high
+    reason: "Enterprise workflows expect reachable registries"
+  registry.metadata-version:
+    enabled: true
+    severity: high
+    reason: "Versioned registry metadata supports change tracking"
+  registry.cors-header:
+    enabled: true
+    severity: medium
+    reason: "Cross-client compatibility should be explicit"
+  install.parse-config:
+    enabled: true
+    severity: critical
+    reason: "Enterprise install configs must parse cleanly"
+  install.command-risk:
+    enabled: true
+    severity: critical
+    reason: "Enterprise environments should not allow risky bootstrap commands"
+  identity.parse-input:
+    enabled: true
+    severity: high
+    reason: "Identity evidence must parse cleanly"
+  identity.missing-field:
+    enabled: true
+    severity: medium
+    reason: "Enterprise review expects identity completeness"
+  identity.drift:
+    enabled: true
+    severity: critical
+    reason: "Identity drift should be treated as a blocking discrepancy"
+  auth.https-required:
+    enabled: true
+    severity: critical
+    reason: "Enterprise auth endpoints must use HTTPS"
+  auth.audience-missing:
+    enabled: true
+    severity: high
+    reason: "Audience/resource should be explicit in enterprise auth flows"
+  auth.inline-token:
+    enabled: true
+    severity: critical
+    reason: "Inline tokens are not acceptable in enterprise review"
+  diff.parse-input:
+    enabled: true
+    severity: high
+    reason: "Change review requires parseable old/new inputs"
+  diff.description-changed:
+    enabled: true
+    severity: medium
+    reason: "Description changes should be reviewable in enterprise flows"
+  diff.tools-changed:
+    enabled: true
+    severity: critical
+    reason: "Tool surface changes require explicit review"
+  diff.install-changed:
+    enabled: true
+    severity: critical
+    reason: "Install changes require explicit review"
+  diff.auth-changed:
+    enabled: true
+    severity: critical
+    reason: "Auth changes require explicit review"

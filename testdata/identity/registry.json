@@ -1,0 +1,8 @@
+{
+  "source": "registry",
+  "registry": {
+    "id": "com.example.memory",
+    "name": "Memory Server",
+    "version": "1.0.0"
+  }
+}

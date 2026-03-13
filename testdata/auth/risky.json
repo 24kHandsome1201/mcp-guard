@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "issuer": "http://issuer.example.com",
+    "tokenUrl": "http://issuer.example.com/oauth/token",
+    "resource": "http://issuer.example.com/api",
+    "headers": {
+      "Authorization": "Bearer hardcoded-token"
+    }
+  }
+}

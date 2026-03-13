@@ -1,0 +1,23 @@
+{
+  "description": "Stable MCP server",
+  "tools": [
+    {
+      "name": "list",
+      "description": "List available items",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ],
+  "install": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@example/server"
+    ]
+  },
+  "auth": {
+    "issuer": "https://issuer.example.com"
+  }
+}

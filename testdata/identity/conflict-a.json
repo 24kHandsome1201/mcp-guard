@@ -1,0 +1,7 @@
+{
+  "server": {
+    "id": "com.example.memory",
+    "name": "Memory Server",
+    "version": "1.0.0"
+  }
+}

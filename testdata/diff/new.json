@@ -1,0 +1,21 @@
+{
+  "description": "Updated MCP server",
+  "tools": [
+    {
+      "name": "list"
+    },
+    {
+      "name": "write"
+    }
+  ],
+  "install": {
+    "command": "docker",
+    "args": [
+      "run",
+      "example/server:latest"
+    ]
+  },
+  "auth": {
+    "issuer": "http://issuer.example.com"
+  }
+}

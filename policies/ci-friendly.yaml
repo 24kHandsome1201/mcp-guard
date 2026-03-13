@@ -1,0 +1,71 @@
+version: "1.0.0"
+name: "ci-friendly"
+description: "CI rollout policy that keeps critical parsing and transport checks strong while lowering reviewer noise"
+metadata:
+  strictMode: false
+  defaultSeverity: medium
+rules:
+  registry.endpoint-reachable:
+    enabled: true
+    severity: medium
+    reason: "CI should still fail when registry endpoints cannot be checked"
+  registry.metadata-version:
+    enabled: true
+    severity: medium
+    reason: "Metadata shape should remain machine-readable"
+  registry.cors-header:
+    enabled: true
+    severity: low
+    reason: "Keep browser compatibility visible but non-blocking"
+  install.parse-config:
+    enabled: true
+    severity: high
+    reason: "Broken install config should remain blocking"
+  install.command-risk:
+    enabled: true
+    severity: medium
+    reason: "Start rollout with visibility before stricter gating"
+  identity.parse-input:
+    enabled: true
+    severity: high
+    reason: "Unparseable identity inputs should remain blocking"
+  identity.missing-field:
+    enabled: true
+    severity: low
+    reason: "Missing identity fields are visible but not overly noisy"
+  identity.drift:
+    enabled: true
+    severity: medium
+    reason: "Identity drift should be highlighted without immediate maximum severity"
+  auth.https-required:
+    enabled: true
+    severity: high
+    reason: "Transport safety remains important in CI"
+  auth.audience-missing:
+    enabled: true
+    severity: low
+    reason: "Audience/resource gaps stay visible during rollout"
+  auth.inline-token:
+    enabled: true
+    severity: high
+    reason: "Inline tokens should still fail CI"
+  diff.parse-input:
+    enabled: true
+    severity: high
+    reason: "Diff inputs must parse correctly"
+  diff.description-changed:
+    enabled: true
+    severity: low
+    reason: "Description drift should be visible but not noisy"
+  diff.tools-changed:
+    enabled: true
+    severity: high
+    reason: "Tool changes are still significant in CI"
+  diff.install-changed:
+    enabled: true
+    severity: high
+    reason: "Install changes remain operationally significant"
+  diff.auth-changed:
+    enabled: true
+    severity: high
+    reason: "Auth changes remain security-relevant"

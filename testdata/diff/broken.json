@@ -1,0 +1,7 @@
+{
+  "description": "Broken JSON",
+  "tools": [
+    {
+      "name": "list"
+    }
+  ]

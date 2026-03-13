@@ -1,0 +1,6 @@
+{
+  "auth": {
+    "issuer": true,
+    "headers": "not-an-object"
+  }
+}

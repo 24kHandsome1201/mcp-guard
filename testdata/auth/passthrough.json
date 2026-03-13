@@ -1,0 +1,14 @@
+{
+  "auth": {
+    "issuer": "https://issuer.example.com",
+    "tokenUrl": "https://issuer.example.com/oauth/token",
+    "audience": "mcp-guard",
+    "forwardAccessToken": true,
+    "passthroughHeaders": [
+      "Authorization"
+    ],
+    "headers": {
+      "Authorization": "${CALLER_TOKEN}"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+version: "1.0.0"
+name: "strict"
+description: "Strict policy for mcp-guard"
+metadata:
+  strictMode: true
+  defaultSeverity: high
+rules:
+  registry.cors-header:
+    enabled: true
+    severity: medium
+    reason: "Strict mode treats missing browser compatibility as a stronger issue"
+  install.command-risk:
+    enabled: true
+    severity: critical
+    reason: "Strict mode escalates risky install patterns"
+  identity.missing-field:
+    enabled: true
+    severity: medium
+    reason: "Strict mode expects stronger identity completeness"
+  identity.drift:
+    enabled: true
+    severity: critical
+    reason: "Strict mode treats identity drift as blocking"
+  auth.audience-missing:
+    enabled: true
+    severity: high
+    reason: "Strict mode requires explicit audience or resource"
+  auth.inline-token:
+    enabled: true
+    severity: critical
+    reason: "Strict mode blocks inline token handling"
+  diff.description-changed:
+    enabled: true
+    severity: medium
+    reason: "Strict mode expects reviewers to look closer at description drift"
+  diff.tools-changed:
+    enabled: true
+    severity: critical
+    reason: "Strict mode blocks tool surface changes by default"
+  diff.install-changed:
+    enabled: true
+    severity: critical
+    reason: "Strict mode blocks install changes by default"
+  diff.auth-changed:
+    enabled: true
+    severity: critical
+    reason: "Strict mode blocks auth changes by default"

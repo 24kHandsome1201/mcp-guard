@@ -1,0 +1,8 @@
+{
+  "auth": {
+    "issuer": "https://issuer.example.com",
+    "tokenUrl": "https://issuer.example.com/oauth/token",
+    "audience": "mcp-guard",
+    "headers": {}
+  }
+}

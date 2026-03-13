@@ -1,0 +1,71 @@
+version: "1.0.0"
+name: "base"
+description: "Base policy for mcp-guard"
+metadata:
+  strictMode: false
+  defaultSeverity: medium
+rules:
+  registry.endpoint-reachable:
+    enabled: true
+    severity: medium
+    reason: "Registry endpoint must answer metadata request"
+  registry.metadata-version:
+    enabled: true
+    severity: medium
+    reason: "Registry metadata should include a string version"
+  registry.cors-header:
+    enabled: true
+    severity: low
+    reason: "Registry metadata should be usable by browser-based clients"
+  install.parse-config:
+    enabled: true
+    severity: high
+    reason: "Install config must parse deterministically"
+  install.command-risk:
+    enabled: true
+    severity: high
+    reason: "Install commands should avoid obvious risk patterns"
+  identity.parse-input:
+    enabled: true
+    severity: high
+    reason: "Identity inputs must be parseable"
+  identity.missing-field:
+    enabled: true
+    severity: low
+    reason: "Missing identity fields should be surfaced"
+  identity.drift:
+    enabled: true
+    severity: high
+    reason: "Identity drift is a meaningful change signal"
+  auth.https-required:
+    enabled: true
+    severity: high
+    reason: "Auth endpoints should be HTTPS"
+  auth.audience-missing:
+    enabled: true
+    severity: medium
+    reason: "Auth config should define audience or resource"
+  auth.inline-token:
+    enabled: true
+    severity: high
+    reason: "Inline tokens should be treated as risky configuration"
+  diff.parse-input:
+    enabled: true
+    severity: high
+    reason: "Diff inputs must parse deterministically"
+  diff.description-changed:
+    enabled: true
+    severity: low
+    reason: "Description changes should be reviewable"
+  diff.tools-changed:
+    enabled: true
+    severity: high
+    reason: "Tool surface changes affect model-visible behavior"
+  diff.install-changed:
+    enabled: true
+    severity: high
+    reason: "Install changes are operationally significant"
+  diff.auth-changed:
+    enabled: true
+    severity: high
+    reason: "Auth changes affect access and trust boundaries"

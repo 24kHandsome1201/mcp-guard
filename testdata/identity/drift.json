@@ -1,0 +1,8 @@
+{
+  "source": "local-config",
+  "server": {
+    "id": "com.example.memory-preview",
+    "name": "Memory Server Preview",
+    "version": "2.0.0"
+  }
+}

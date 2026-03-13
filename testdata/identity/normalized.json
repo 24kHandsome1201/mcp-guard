@@ -1,0 +1,8 @@
+{
+  "source": "manifest",
+  "manifest": {
+    "canonicalId": "COM.EXAMPLE.MEMORY",
+    "displayName": "  Memory   Server  ",
+    "version": "v1.0.0"
+  }
+}

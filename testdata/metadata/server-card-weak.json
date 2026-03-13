@@ -1,0 +1,10 @@
+{
+  "id": "com.example.weak",
+  "name": "Weak Server",
+  "endpoints": [
+    "http://example.com/mcp"
+  ],
+  "auth": {
+    "audience": "mcp-guard"
+  }
+}

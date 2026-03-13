@@ -1,0 +1,6 @@
+{
+  "install": {
+    "command": 123,
+    "args": "not-an-array"
+  }
+}

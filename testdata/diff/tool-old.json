@@ -1,0 +1,18 @@
+{
+  "description": "MCP server with one write tool",
+  "tools": [
+    {
+      "name": "write_note",
+      "description": "Write a note to storage",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": ["content"]
+      }
+    }
+  ]
+}

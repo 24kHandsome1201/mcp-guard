@@ -1,0 +1,9 @@
+version: "1.0.0"
+name: trust-sensitive
+description: Example overlay that tightens HTTPS trust signals and suppresses homepage checks.
+rules:
+  trust.endpoint-https-missing:
+    enabled: true
+    severity: critical
+  trust.homepage-missing:
+    enabled: false

@@ -1,0 +1,42 @@
+{
+  "report": {
+    "command": "diff",
+    "startedAt": "2026-03-13T00:00:00.000Z",
+    "finishedAt": "2026-03-13T00:00:00.500Z",
+    "metadata": {
+      "diffRisk": {
+        "overallRisk": "high",
+        "changedAreas": ["tools", "tool-params"],
+        "byRisk": {
+          "high": 2,
+          "medium": 1,
+          "low": 0
+        }
+      }
+    },
+    "findings": [
+      {
+        "check": "diff",
+        "ruleId": "diff.tool-params-changed",
+        "status": "fail",
+        "message": "Tool parameter surface changed for write_note",
+        "severity": "high",
+        "details": {
+          "riskLevel": "high",
+          "changedArea": "tool-params"
+        }
+      },
+      {
+        "check": "diff",
+        "ruleId": "diff.tool-description-ambiguous",
+        "status": "warn",
+        "message": "Multiple tools share the same description",
+        "severity": "medium",
+        "details": {
+          "riskLevel": "medium",
+          "changedArea": "tools"
+        }
+      }
+    ]
+  }
+}

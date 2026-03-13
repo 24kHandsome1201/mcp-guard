@@ -1,0 +1,57 @@
+name: mcp-guard
+description: Run mcp-guard checks in GitHub Actions and publish a job summary.
+
+inputs:
+  command:
+    description: Full CLI command, for example "registry lint" or "diff"
+    required: true
+  args:
+    description: Optional command arguments as a JSON string array or whitespace/newline separated tokens
+    required: false
+    default: ""
+  policy:
+    description: Optional path to a policy file
+    required: false
+    default: ""
+  fail-on:
+    description: warning, error, or off
+    required: false
+    default: warning
+  policy:
+    description: Optional path to a policy file
+    required: false
+    default: ""
+  baseline:
+    description: Optional path to a baseline file
+    required: false
+    default: ""
+  ignore-file:
+    description: Optional path to an ignore file
+    required: false
+    default: ""
+  risk-budget:
+    description: Optional integer risk budget
+    required: false
+    default: ""
+  working-directory:
+    description: Directory to run the CLI from
+    required: false
+    default: .
+
+outputs:
+  exit-code:
+    description: CLI exit code
+  report-path:
+    description: Path to the generated JSON report
+  json-report-path:
+    description: Path to the generated JSON report
+  sarif-report-path:
+    description: Path to the generated SARIF report
+  markdown-summary-path:
+    description: Path to the generated Markdown summary
+  finding-count:
+    description: Number of findings in the generated report
+
+runs:
+  using: node20
+  main: dist/index.js

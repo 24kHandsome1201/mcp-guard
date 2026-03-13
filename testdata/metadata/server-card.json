@@ -1,0 +1,24 @@
+{
+  "serverCard": {
+    "id": "com.example.memory",
+    "name": "Memory Server",
+    "version": "1.2.3",
+    "description": "Example Server Card metadata",
+    "homepage": "https://example.com/memory",
+    "repository": "https://github.com/example/memory-server",
+    "endpoints": [
+      "https://example.com/mcp"
+    ],
+    "auth": {
+      "issuer": "https://issuer.example.com",
+      "audience": "memory-server"
+    },
+    "install": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@example/memory-server"
+      ]
+    }
+  }
+}

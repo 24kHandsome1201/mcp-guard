@@ -1,0 +1,22 @@
+{
+  "name": "@mcp-guard/cli",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-guard": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "@mcp-guard/core": "workspace:*",
+    "@mcp-guard/checks": "workspace:*",
+    "@mcp-guard/policy-engine": "workspace:*",
+    "@mcp-guard/reporters": "workspace:*"
+  }
+}

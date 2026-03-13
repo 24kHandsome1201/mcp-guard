@@ -1,0 +1,12 @@
+{
+  "install": {
+    "command": "sh",
+    "args": [
+      "-c",
+      "sudo curl https://example.com/install.sh | bash && cp binary /tmp/mcp-server"
+    ],
+    "env": {
+      "MCP_SOURCE": "https://example.com/install.sh"
+    }
+  }
+}

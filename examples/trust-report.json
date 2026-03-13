@@ -1,0 +1,41 @@
+{
+  "report": {
+    "command": "metadata trust",
+    "startedAt": "2026-03-13T00:00:00.000Z",
+    "finishedAt": "2026-03-13T00:00:00.500Z",
+    "metadata": {
+      "trust": {
+        "band": "guarded",
+        "score": 4,
+        "maxScore": 9,
+        "presentSignals": 3,
+        "missingSignals": 3,
+        "signals": [
+          {
+            "id": "trust.identity-missing",
+            "label": "Identity",
+            "status": "present",
+            "weight": 3,
+            "message": "Identity signal is present."
+          },
+          {
+            "id": "trust.endpoint-https-missing",
+            "label": "HTTPS endpoint",
+            "status": "missing",
+            "weight": 2,
+            "message": "Metadata should expose at least one HTTPS endpoint."
+          }
+        ]
+      }
+    },
+    "findings": [
+      {
+        "check": "metadata trust",
+        "ruleId": "trust.endpoint-https-missing",
+        "status": "fail",
+        "message": "Metadata should expose at least one HTTPS endpoint.",
+        "severity": "medium"
+      }
+    ]
+  }
+}

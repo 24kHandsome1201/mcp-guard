@@ -1,0 +1,37 @@
+name: Bug report
+description: Report a defect in checks, reporters, CLI behavior, or repository automation.
+title: "[bug] "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Describe the broken behavior and the expected behavior.
+      placeholder: A short description of the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Provide the smallest command, fixture, or config that reproduces the problem.
+      placeholder: |
+        corepack pnpm -C apps/cli exec mcp-guard ...
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Explain who is affected and how severe the issue is.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include OS, Node version, pnpm version, and any relevant context.
+    validations:
+      required: false

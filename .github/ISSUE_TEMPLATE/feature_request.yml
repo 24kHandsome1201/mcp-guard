@@ -1,0 +1,34 @@
+name: Feature request
+description: Suggest an improvement to checks, policy packs, reporters, CI, or docs.
+title: "[feature] "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem are you trying to solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe the change you want and why it is worth adding.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What have you tried already, or what alternatives did you reject?
+    validations:
+      required: false
+  - type: textarea
+    id: examples
+    attributes:
+      label: Example inputs or outputs
+      description: Commands, configs, or report snippets that show the desired behavior.
+    validations:
+      required: false

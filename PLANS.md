@@ -1900,3 +1900,49 @@ The current diff only reports that changes happened. It does not help reviewers 
   - `corepack pnpm run typecheck`
   - `corepack pnpm run test`
   - `corepack pnpm run lint`
+
+## Active plan: Public repository hardening and launch prep
+
+Status: in-progress
+Owner: Codex
+Date: 2026-03-14
+
+### Goal
+Prepare the public GitHub repository for external contributors by enabling key repository protections, adding contribution templates, publishing an alpha release, and opening initial public issues.
+
+### Scope
+- enable discussions
+- enable key security settings and branch protection on `main`
+- add issue forms and PR template under `.github/`
+- add a real CLI output example to `README.md`
+- publish `v0.1.0-alpha.1`
+- create public launch issues for roadmap, known limitations, and feedback
+
+### Out of scope
+- full CI redesign
+- marketplace/release automation
+- contribution guide beyond minimal templates
+
+### Expected files
+- `.github/ISSUE_TEMPLATE/*`
+- `.github/PULL_REQUEST_TEMPLATE.md`
+- `README.md`
+
+### Milestones
+1. local repo templates and docs
+   - Deliverables: issue forms, PR template, README output example
+2. remote repo settings and release
+   - Deliverables: security settings, branch protection, discussions, alpha release
+3. public launch issues and final push
+   - Deliverables: pushed template/docs changes and three public issues
+
+### Risks and assumptions
+- GitHub branch protection will be configured without required status checks because the repo does not yet expose a stable workflow check set.
+- Some security features are GitHub-plan dependent; unsupported toggles will be applied on a best-effort basis.
+
+### Completion criteria
+- main branch has protection
+- repository has discussions enabled
+- issue forms and PR template are live
+- `v0.1.0-alpha.1` exists
+- three public issues are open

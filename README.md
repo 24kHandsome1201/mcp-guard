@@ -52,6 +52,34 @@ corepack pnpm -C apps/cli exec mcp-guard \
   auth check ./testdata/auth/risky.json
 ```
 
+## Real Output Example
+
+Terminal output from:
+`node apps/cli/dist/index.js diff ./testdata/diff/tool-old.json ./testdata/diff/tool-new.json`
+
+```text
+Report: diff
+Total findings: 6
+Started: 2026-03-13T15:47:00.838Z
+Finished: 2026-03-13T15:47:00.840Z
+Diff risk: high (description, tools, tool-params)
+
+By severity:
+critical: 0
+high: 0
+medium: 6
+low: 0
+info: 0
+
+Findings:
+- [medium] diff: Description changed
+- [medium] diff: Tool surface changed
+- [medium] diff: Tool parameter surface changed for write_note
+- [medium] diff: Tool write_note has an ambiguous description
+- [medium] diff: Tool write_note_fast has an ambiguous description
+- [medium] diff: Multiple tools share the same description
+```
+
 ## GitHub Action
 
 The repository includes a local GitHub Action wrapper at `./packages/github-action/action.yml`.

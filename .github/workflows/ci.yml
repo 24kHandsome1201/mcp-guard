@@ -17,6 +17,9 @@ jobs:
       - name: Enable corepack
         run: corepack enable
 
+      - name: Approve build scripts
+        run: corepack pnpm config set allowBuilds.esbuild true
+
       - name: Install dependencies
         run: corepack pnpm install
 
